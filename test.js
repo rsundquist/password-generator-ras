@@ -3,58 +3,54 @@
 //  lowercase & uppercase 
 //  symbols
 
-var lowCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-var upCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var caps = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-var num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-var symb = ["+", "/", "!", "@", "$", "%", "#", "*"];
+var special = ["+", "/", "!", "@", "$", "%", "#", "*"];
 
-var newArray = []
+var passwordCharacters = []
 
 
 function generatePassword() {
 
-  var userLength = prompt("Please pick your total password length. Must be 8-128 characters")
+  var passwordCharacters = prompt("Please pick your total password length. Must be 8-128 characters")
 
-  var userLow = confirm("Would you like to include lowercase letters? Okay for Yes. Cancel for No")
+  var choiceAlpha = confirm("Would you like to include lowercase letters? Okay for Yes. Cancel for No")
 
-  var userUp = confirm("Would you like to include Uppercase letters? Okay for Yes Cancel for No")
+  var choiceCaps = confirm("Would you like to include Uppercase letters? Okay for Yes Cancel for No")
 
-  var userSym = confirm("Would you like to include Symbols? Okay for Yes Cancel for No")
+  var choiceNumeric = confirm("Would you like to include Symbols? Okay for Yes Cancel for No")
 
-  var userNum = confirm("Would you like to include Numbers? Okay for Yes Cancel for No")
+  var choiceSpecial = confirm("Would you like to include Numbers? Okay for Yes Cancel for No")
 
+  for (i = 0; i < passwordCharacters; i++){
+    randomNumber = Math.floor(Math.random()* passwordCharacters.length);
 
-    if (userLength) {
-        var lengthRandom = userLength[Math.floor(Math.random() * lowCase.length)]
-        newArray = newArray.concat(lengthRandom);
-        console.log(newArray)
+        if (choiceAlpha) {
+        var alphaRandom = alpha[Math.floor(Math.random() * alpha.length)]
+        passwordCharacters = passwordCharacters.concat(lowRandom);
+        console.log(passwordCharacters)
   }
 
-    if (userLow) {
-        var lowRandom = lowCase[Math.floor(Math.random() * lowCase.length)]
-        newArray = newArray.concat(lowRandom);
-        console.log(newArray)
+    if (choiceCaps) {
+        var capsRandom = caps[Math.floor(Math.random() * caps.length)]
+        passwordCharacters = passwordCharacters.concat(capsRandom);
+        console.log(passwordCharacters)
   }
 
-    if (userUp) {
-        var upRandom = upCase[Math.floor(Math.random() * upCase.length)]
-        newArray = newArray.concat(upRandom);
-        console.log(newArray)
+    if (choiceSpecial) {
+        var specialRandom = special[Math.floor(Math.random() * special.length)] 
+        passwordCharacters = passwordCharacters.concat(specialRandom);
+        console.log(passwordCharacters)
   }
 
-    if (userSym) {
-        var symRandom = symb[Math.floor(Math.random() * symb.length)] 
-        newArray = newArray.concat(symRandom);
-        console.log(newArray)
-  }
-
-    if (userNum) {
-        var numRandom = num[Math.floor(Math.random() * num.length)]
-        newArray = newArray.concat(numRandom);
-        console.log(newArray) 
+    if (choiceNumeric) {
+        var numericRandom = num[Math.floor(Math.random() * numeric.length)]
+        passwordCharacters = passwordCharacters.concat(numRandom);
+        console.log(passwordCharacters) 
   }
           // shuffle here
 
