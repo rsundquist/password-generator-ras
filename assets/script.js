@@ -6,12 +6,12 @@ var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var special = ["+", "/", "!", "@", "$", "%", "#", "*"];
 
-var newArray = []
+var passwordCharacters = []
 
 
 function generatePassword() {
 
-  var passwordLength = prompt("Please pick your total password length. Must be 8-128 characters")
+  var passwordLength = prompt("Please choose your password length. Must be 8-128 characters")
 
   var choiceAlpha = confirm("Would you like to include lowercase letters? Okay for Yes. Cancel for No")
 
@@ -26,31 +26,30 @@ function generatePassword() {
 
     if (choiceAlpha) {
       var alphaRandom = alpha[Math.floor(Math.random() * alpha.length) / 4]
-      newArray = newArray.concat(alphaRandom);
-      console.log(newArray)
+      passwordCharacters = passwordCharacters.concat(alphaRandom);
+      console.log(passwordCharacters)
     }
 
     if (choiceCaps) {
       var capsRandom = caps[Math.floor(Math.random() * caps.length) / 4]
-      newArray = newArray.concat(capsRandom);
-      console.log(newArray)
+      passwordCharacters = passwordCharacters.concat(capsRandom);
+      console.log(passwordCharacters)
     }
 
     if (choiceSpecial) {
       var specialRandom = special[Math.floor(Math.random() * special.length) / 4]
-      newArray = newArray.concat(specialRandom);
-      console.log(newArray)
+      passwordCharacters = passwordCharacters.concat(specialRandom);
+      console.log(passwordCharacters)
     }
 
     if (choiceNumeric) {
       var numericRandom = numeric[Math.floor(Math.random() * numeric.length) / 4]
-      newArray = newArray.concat(numericRandom);
-      console.log(newArray)
+      passwordCharacters = passwordCharacters.concat(numericRandom);
+      console.log(passwordCharacters)
     }
   }
-  // shuffle here
 
-  return newArray.join("");
+  return passwordCharacters.join("");
 }
 
 
