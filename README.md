@@ -12,7 +12,7 @@
 -  https://github.com/rsundquist/password-generator-ras.git
 
 ### Here is a screenshot of my application
- - C:\Users\rsund\MSUCode\password-generator-ras\assets\Images\password-generator-screenshot.png
+ - ![Screenshot](C:\Users\rsund\MSUCode\password-generator-ras\assets\Images\password-generator-screenshot.png "Password Generator")
 
 
 
