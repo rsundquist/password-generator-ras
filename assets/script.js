@@ -6,6 +6,8 @@ var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var special = ["+", "/", "!", "@", "$", "%", "#", "*"];
 
+var password;
+
 function generatePassword() {
 
   var passwordCharacters = []
@@ -47,7 +49,7 @@ function generatePassword() {
   }
 
 
-    return passwordCharacters;
+    return password;
 }
 
 
@@ -55,6 +57,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+  password = ""
   generatePassword();
   var passwordText = document.querySelector("#password");
 
